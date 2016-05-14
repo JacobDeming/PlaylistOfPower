@@ -1,0 +1,22 @@
+{
+  "name": "playlist-of-power",
+  "version": "1.0.0",
+  "description": "easier method through which to add songs to Vin's playlist",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.5",
+    "method-override": "^2.3.5",
+    "mysql": "^2.10.2",
+    "sequelize": "^3.23.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "author": "TKCriminal",
+  "license": "ISC"
+}
