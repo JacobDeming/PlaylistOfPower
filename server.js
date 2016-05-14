@@ -16,8 +16,8 @@ app.engine('handlebars', expressHandlebars({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 app.use(methodOverride('_method'));
 
-var sequelize = new Sequelize('musicDB', 'root', 'LARPing1991', {
-  host: 'localhost',
+var sequelize = new Sequelize('rqygtt0q3i9hidqw', 'mezovh63hjy58nqk', 'lvd3n9uwvi47sdjo', {
+  host: 'jw0ch9vofhcajqg7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   dialect: 'mysql',
   pool: {
     max: 5,
@@ -40,6 +40,8 @@ var Song=sequelize.define('song',{
 		type: Sequelize.STRING},
 	power_type:{
 		type: Sequelize.STRING}})
+
+Song.sync();
 
 app.post('/api/song',function(req,res){
 	Song.create({title:req.body.title,artist:req.body.artist,link:req.body.link,eye_color:req.body.color,power_name:req.body.name,power_type:req.body.type}).then(function(song){
