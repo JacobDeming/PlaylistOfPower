@@ -64,7 +64,7 @@
                         <tr>
                             <td><a href={{link}}>{{title}}</a></td> 
                             <td>{{artist}}</td> 
-                            <td>{{eye_color}}</td>
+                            <td style="background-color:{{hue}};color:{{opp_hue}}">{{eye_color}}</td>
                             <td>{{power_name}}</td>
                             <td>{{power_type}}</td>
                         </tr> 
@@ -75,16 +75,3 @@
         </div>
     </div>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function(){
-        (function($){
-            $('#Search').keyup(function(){
-                var rex=new RegExp($(this).val(),'i');
-                $('.searchable tr').hide();
-                $('.searchable tr').filter(function(){
-                    return rex.test($(this).text());}).show();
-            })
-        }(jQuery));
-    })
-</script>

@@ -29,6 +29,10 @@ var Song=sequelize.define('song',{
 			isUrl: true}},
 	eye_color:{
 		type: Sequelize.STRING},
+	hue:{
+		type: Sequelize.STRING},
+	opp_hue:{
+		type: Sequelize.STRING},
 	power_name:{
 		type: Sequelize.STRING},
 	power_type:{
