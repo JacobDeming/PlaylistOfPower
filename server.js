@@ -24,6 +24,14 @@ var sequelize = new Sequelize('rqygtt0q3i9hidqw', 'mezovh63hjy58nqk', 'lvd3n9uwv
     min: 0,
     idle: 10000}})
 
+// var sequelize = new Sequelize('musicdb', 'root', 'LARPing1991', {
+//   host: 'localhost',
+//   dialect: 'mysql',
+//   pool: {
+//     max: 5,
+//     min: 0,
+//     idle: 10000}})
+
 var Song=sequelize.define('song',{
 	id:{
 		type: Sequelize.INTEGER,autoIncrement:true,unique:true,primaryKey:true},
