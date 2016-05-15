@@ -4,7 +4,7 @@ var colourlovers=require('colourlovers');
 
 module.exports=function(app){
 app.post('/api/song',function(req,res){
-	colourlovers.get('/colors',{keywords:req.body.color,numResults:1},function(err,data){
+	colourlovers.get('/colors',{keywords:req.body.color,keywordExact:1,numResults:1},function(err,data){
 		if(err) throw err;
 		var hue='#'+data[0].hex;
 		var opp='#'+invertColor(data[0].hex);
