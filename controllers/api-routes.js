@@ -13,6 +13,6 @@ app.post('/api/song',function(req,res){
 		if(color.isDark()==true){
 			text='#000000';}
 		else{text='#FFFFFF';}
-	Song.create({title:req.body.title,artist:req.body.artist,link:req.body.link,eye_color:req.body.color,hue:hue,opp_hue:opp,power_name:req.body.name,power_type:req.body.type}).then(function(song){
+	Song.create({title:req.body.title,artist:req.body.artist,link:req.body.link,eye_color:req.body.color,hue:hue,opp_hue:text,power_name:req.body.name,power_type:req.body.type}).then(function(song){
 			res.redirect("/");})})})}
 
