@@ -48,7 +48,7 @@ app.post('/api/song',function(req,res){
 			res.redirect("/");})})
 
 app.get('/',function(req,res){
-	Song.findAll({order:"power_type DESC",raw:true}).then(function(song){
+	Song.findAll({order:"power_name ASC",raw:true}).then(function(song){
 		console.log(song);
 		res.render('index',{song});})})
 
